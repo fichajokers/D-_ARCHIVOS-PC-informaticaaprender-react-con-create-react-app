@@ -43,7 +43,7 @@ class CargarDatosApi extends Component{
                                         <tr>
                                             <td>{contacto.name}</td>
                                             <td>{contacto.email}</td>
-                                            <td>{contacto.address.street + " " + contacto.address.suite + ", " + contacto.address.city} </td>
+                                            <td>{contacto.address.street + " " + contacto.address.suite + ", " + contacto.address.city}</td>
                                             <td>{contacto.phone}</td>
                                         </tr>
                                     </React.Fragment>
