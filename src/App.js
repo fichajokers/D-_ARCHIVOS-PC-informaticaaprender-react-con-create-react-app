@@ -18,7 +18,7 @@ function holaMundo(nombre,edad){
 }
 
 function App() {
-  var nombre = 'Matías Villar';
+  var nombre = 'Matías';
   
   return (
     <div className="App">
