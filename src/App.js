@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from './assets/images/logo.svg';
+//import logo from './assets/images/logo.svg';
 import './assets/css/App.css';
+import 'bootstrap/dist/css/bootstrap.css'
 
-//importar componentes
-import MiComponente from './components/MiComponente';
-import CargarDatosApi from './components/CargarDatosApi';
+import Main from './components/Main';
 
-function holaMundo(nombre,edad){
+//<CargarDatosApi />
+/*function holaMundo(nombre,edad){
   var presentacion = (
     <div>
       <h2>Hola, soy {nombre} y estoy aprendiendo react</h2>
@@ -15,24 +15,33 @@ function holaMundo(nombre,edad){
   );
   
   return presentacion
-}
+}*/
 
 function App() {
-  var nombre = 'Matías';
-  
+  //var nombre = 'Matías';
   return (
     <div className="App">
       <header className="App-header">
+        <Main></Main>
+      </header>
+    </div>
+  );
+  /*return (
+    <div className="App">
+      <header className="App-header">
+        <Main></Main>
+        <section className="componente-navbar">
+          <MenuPrincipal></MenuPrincipal>
+        </section>
+
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Bienvenido a react
         </p>
         {holaMundo(nombre,26)}
-
         <section className="componentes">
           <MiComponente />
           <hr/>
-          <CargarDatosApi />
         </section>
 
         <a
@@ -45,7 +54,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  );*/
 }
 
 export default App;

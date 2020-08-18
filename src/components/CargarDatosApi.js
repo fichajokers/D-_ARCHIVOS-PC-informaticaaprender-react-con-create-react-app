@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import Table from 'react-bootstrap/Table';
 
 class CargarDatosApi extends Component{
     state = {
@@ -18,7 +19,7 @@ class CargarDatosApi extends Component{
         return(
             <div className="cargar-datos-api">
                 <p>Cargar datos api.</p>
-                <table>
+                <Table responsive="sm" striped bordered hover variant="dark">
                     <thead>
                         <tr>
                             <td>
@@ -51,7 +52,7 @@ class CargarDatosApi extends Component{
                             })
                         }
                     </tbody>
-                </table>
+                </Table>
             </div>
         );
     }
