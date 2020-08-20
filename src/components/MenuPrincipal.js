@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Navbar,Nav,Form,FormControl,Button} from 'react-bootstrap';
+import {Navbar,Nav} from 'react-bootstrap';
 import logo from '../assets/images/logo.svg';
 
 class MenuPrincipal extends Component{
@@ -36,6 +36,7 @@ class MenuPrincipal extends Component{
                         <Nav.Link id="Inicio"        onClick={this.handleClick.bind(this)}>Inicio</Nav.Link>
                         <Nav.Link id="Tabla Api"     onClick={this.handleClick.bind(this)}>Tabla Api</Nav.Link>
                         <Nav.Link id="Formulario"    onClick={this.handleClick.bind(this)}>Formulario</Nav.Link>
+                        <Nav.Link id="Cargando"      onClick={this.handleClick.bind(this)}>Cargando al cargar Data</Nav.Link>
                     </Nav>
                 </Navbar>
             </React.Fragment>

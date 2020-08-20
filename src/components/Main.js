@@ -5,6 +5,8 @@ import MiComponente from './MiComponente';
 import CargarDatosApi from './CargarDatosApi';
 import MenuPrincipal from './MenuPrincipal';
 import Question from './Questions'
+import Formulario from './Formulario'
+import CargandoAlCargarData from './CargandoAlCargarData'
 
 class Main extends Component{
     state = {
@@ -47,13 +49,13 @@ class Main extends Component{
             )
         }
 
-        if ( this.state.opcionSeleccionada == 'Tabla Api' ) {
+        if ( this.state.opcionSeleccionada === 'Tabla Api' ) {
             opcionSeleccionada = (
                 <div>
                     <CargarDatosApi></CargarDatosApi>
                 </div>
             )
-        }else if( this.state.opcionSeleccionada == 'Inicio' ){
+        }else if( this.state.opcionSeleccionada === 'Inicio' ){
             opcionSeleccionada = (
                 <React.Fragment>
                     <section className="componente-prueba">
@@ -71,8 +73,14 @@ class Main extends Component{
                 </React.Fragment>
             )
 
-        }else if( this.state.opcionSeleccionada == 'Formulario' ){
-            
+        }else if( this.state.opcionSeleccionada === 'Formulario' ){
+            opcionSeleccionada = (
+                <Formulario></Formulario>
+            )
+        }else if( this.state.opcionSeleccionada === 'Cargando' ){
+            opcionSeleccionada = (
+                <CargandoAlCargarData></CargandoAlCargarData>
+            )
         }
 
         return(
