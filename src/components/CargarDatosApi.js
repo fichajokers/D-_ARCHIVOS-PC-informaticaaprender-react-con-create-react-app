@@ -6,13 +6,14 @@ class CargarDatosApi extends Component{
         contactos: []
     }
 
-    componentDidMount(){
-        fetch('http://jsonplaceholder.typicode.com/users')
-        .then(res => res.json())
-        .then( (data) => {
-            this.setState({ contactos: data })
-        })
-        .catch(console.log);
+    async componentDidMount(){
+        await fetch('http://jsonplaceholder.typicode.com/users')
+            .then(res => res.json())
+            .then( (data) => {
+                this.setState({ contactos: data })
+            })
+            .catch(console.log);
+        
     }
 
     render(){

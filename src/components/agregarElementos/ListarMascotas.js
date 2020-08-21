@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-
-import animales from '../../samples/ejemplosStyle.json'
 import EditarAnimal from './EditarAnimal'
 
 export default class ListarMascotas extends Component{

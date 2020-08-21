@@ -33,7 +33,7 @@ export default class CrudData extends Component{
 
     updateData = (id) => {
         const newAnimal = this.state.animales.map(animal => {
-            if( animal.id == id ){
+            if( animal.id === id ){
                 animal.vivo = !animal.vivo
             }
             return animal

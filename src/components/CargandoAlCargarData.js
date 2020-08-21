@@ -1,6 +1,4 @@
 import React,{Component} from 'react'
-import Spinner from 'react-bootstrap/Spinner';
-
 import Loading from './Loading'
 
 class CargandoAlCargarData extends Component{
