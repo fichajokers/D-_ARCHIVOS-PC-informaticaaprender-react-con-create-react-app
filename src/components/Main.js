@@ -29,80 +29,31 @@ class Main extends Component{
         })
     }
 
-    opcionSeleccionada = (opcionSeleccionada) => {
-        console.log("soy el parent y recibi.. " + opcionSeleccionada)
-        this.setState({
-            opcionSeleccionada: opcionSeleccionada
-        });
-    }
-
     render(){
-        let questions = null;
-        let opcionSeleccionada = '';
-        if ( this.state.displayQuestions ) {
-            questions = (
-                <React.Fragment>
-                    {
-                        this.state.questions.map((question, index) => {
-                            return <Question key={question.id}
-                            title={question.title} />
-                        })
-                    }
-                </React.Fragment>
-            )
-        }
-
-        if ( this.state.opcionSeleccionada === 'Tabla Api' ) {
-            opcionSeleccionada = (
-                <div>
-                    <CargarDatosApi></CargarDatosApi>
-                </div>
-            )
-        }else if( this.state.opcionSeleccionada === 'Inicio' ){
-            opcionSeleccionada = (
-                <React.Fragment>
-                    <section className="componente-prueba">
-                        <button className="btn" onClick={this.displayQuestion}>View Unanswered Questions</button>
-                        {questions}
-                    </section>
-                    <p>
-                    Bienvenido a react
-                    </p>
-
-                    <section className="componentes">
-                        <MiComponente />
-                        <hr/>
-                    </section>
-                </React.Fragment>
-            )
-
-        }else if( this.state.opcionSeleccionada === 'Formulario' ){
-            opcionSeleccionada = (
-                <Formulario></Formulario>
-            )
-        }else if( this.state.opcionSeleccionada === 'Cargando' ){
-            opcionSeleccionada = (
-                <CargandoAlCargarData></CargandoAlCargarData>
-            )
-        }else if( this.state.opcionSeleccionada === 'Style' ){
-            opcionSeleccionada = (
-                <Style/>
-            )
-        }else if( this.state.opcionSeleccionada === 'CrudData' ){
-            opcionSeleccionada = (
-                <CrudData/>
-            )
-        }
-
         return(
             <main>
-                <section className="componente-navbar">
-                <MenuPrincipal onMenuPrincipal={this.opcionSeleccionada}></MenuPrincipal>
-                </section>
-                
-                <section className="componente-prueba">
-                    {opcionSeleccionada}
-                </section>
+                <Router>
+                    <Route exact path="/CargarDatosApi">
+                        <CargarDatosApi/>
+                    </Route>
+                    <Route exact path="/Formulario">
+                        <Formulario/>
+                    </Route>
+                    <Route exact path="/CargandoAlCargarData">
+                        <CargandoAlCargarData/>
+                    </Route>
+                    <Route exact path="/Style">
+                        <Style />
+                    </Route>
+                    <Route exact path="/CrudData">
+                        <CrudData />
+                    </Route>
+
+                    <section className="componente-navbar">
+                        <MenuPrincipal />
+                    </section>
+
+                </Router>
             </main>
         );
     }
