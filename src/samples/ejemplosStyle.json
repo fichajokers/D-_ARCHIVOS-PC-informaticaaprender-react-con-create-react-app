@@ -1,0 +1,23 @@
+[
+    {
+        "id"        : 1,
+        "nombre"    : "Gato",
+        "edad"      : 20,
+        "dueño"     : "Juan soto",
+        "vivo"      : true
+    },
+    {
+        "id"        : 2,
+        "nombre"    : "perro",
+        "edad"      : 20,
+        "dueño"     : "Emerito Muller",
+        "vivo"      : false
+    },
+    {
+        "id"        : 3,
+        "nombre"    : "huron",
+        "edad"      : 20,
+        "dueño"     : "Patricio Leiva",
+        "vivo"      : true
+    }
+]

@@ -7,6 +7,8 @@ import MenuPrincipal from './MenuPrincipal';
 import Question from './Questions'
 import Formulario from './Formulario'
 import CargandoAlCargarData from './CargandoAlCargarData'
+import Style from './Style'
+import CrudData from './agregarElementos/CrudData';
 
 class Main extends Component{
     state = {
@@ -80,6 +82,14 @@ class Main extends Component{
         }else if( this.state.opcionSeleccionada === 'Cargando' ){
             opcionSeleccionada = (
                 <CargandoAlCargarData></CargandoAlCargarData>
+            )
+        }else if( this.state.opcionSeleccionada === 'Style' ){
+            opcionSeleccionada = (
+                <Style/>
+            )
+        }else if( this.state.opcionSeleccionada === 'CrudData' ){
+            opcionSeleccionada = (
+                <CrudData/>
             )
         }
 

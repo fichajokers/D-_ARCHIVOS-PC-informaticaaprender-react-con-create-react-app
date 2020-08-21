@@ -33,10 +33,12 @@ class MenuPrincipal extends Component{
                     />
                     </Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link id="Inicio"        onClick={this.handleClick.bind(this)}>Inicio</Nav.Link>
-                        <Nav.Link id="Tabla Api"     onClick={this.handleClick.bind(this)}>Tabla Api</Nav.Link>
-                        <Nav.Link id="Formulario"    onClick={this.handleClick.bind(this)}>Formulario</Nav.Link>
-                        <Nav.Link id="Cargando"      onClick={this.handleClick.bind(this)}>Cargando al cargar Data</Nav.Link>
+                        <Nav.Link id="Inicio"       onClick={this.handleClick.bind(this)}>Inicio</Nav.Link>
+                        <Nav.Link id="Tabla Api"    onClick={this.handleClick.bind(this)}>Tabla Api</Nav.Link>
+                        <Nav.Link id="Formulario"   onClick={this.handleClick.bind(this)}>Formulario</Nav.Link>
+                        <Nav.Link id="Cargando"     onClick={this.handleClick.bind(this)}>Load Data</Nav.Link>
+                        <Nav.Link id="Style"        onClick={this.handleClick.bind(this)}>Style</Nav.Link>
+                        <Nav.Link id="CrudData"     onClick={this.handleClick.bind(this)}>Crud Data</Nav.Link>
                     </Nav>
                 </Navbar>
             </React.Fragment>

@@ -11,9 +11,11 @@ class Loading extends Component{
 
     render(){
         return(
-            <Spinner animation="grow" variant="info">
-                <span className="sr-only">Cargando...</span>
-            </Spinner>
+            <div className="loading-component">
+                <Spinner animation="grow" variant="info">
+                </Spinner>
+                <p>{this.props.textoCargando}</p>
+            </div>
         );
     }
 }

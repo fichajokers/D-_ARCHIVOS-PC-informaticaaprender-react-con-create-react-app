@@ -87,24 +87,20 @@ class Formulario extends Component{
     constructor(props){
         super(props);
         this.state = {
-            value: '',
             nombre: '',
-            contrasena: '',
-            formink: null
+            contrasena: ''
         };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(event){
+    handleChange = event => {
         this.setState({
-            value: event.target.value
+            [event.target.name]: event.target.value
         });
     }
 
-    handleSubmit(e){
-        console.log('el valor del formulario es:',this.state.value);
-        e.preventDefault(); 
+    handleSubmit = e => {
+        console.log('el valor del formulario es:',this.state);
+        e.preventDefault();
     }
 
     render(){
@@ -114,7 +110,12 @@ class Formulario extends Component{
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Group controlId="formBasicEmail2">
                         <Form.Label>Nombre</Form.Label>
-                        <Form.Control type="text" placeholder="Nombre" name="nombre" vvalue={this.state.value} onChange={this.handleChange}/>
+                        <Form.Control 
+                        type="text" 
+                        placeholder="Nombre"
+                        name="nombre" 
+                        value={this.state.nombre} 
+                        onChange={this.handleChange}/>
                         <Form.Text className="text-muted">
                         Ingrese nombre completo
                         </Form.Text>
@@ -122,7 +123,13 @@ class Formulario extends Component{
 
                     <Form.Group controlId="formBasicPassword">
                         <Form.Label>Contraseña</Form.Label>
-                        <Form.Control type="password" name="contrasena" placeholder="Contraseña" />
+                        <Form.Control 
+                        type="password" 
+                        name="contrasena"
+                        value={this.state.contrasena}
+                        placeholder="Contraseña"
+                        onChange={this.handleChange}
+                        />
                     </Form.Group>
                     <Button variant="primary" type="submit" value="submit">
                         Enviar formulario
